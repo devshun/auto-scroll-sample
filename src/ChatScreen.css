@@ -1,0 +1,45 @@
+.container {
+    overflow-y: overlay;
+    display: inline-block;
+}
+
+.messages-container {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    margin-bottom: 100px;
+}
+
+.message {
+    padding: 5px 20px;
+    background-color: #dcf8c6;
+    display: block;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    clear: both;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100px;
+    padding: 5px;
+    width: 100%;
+    position: fixed;
+    bottom: 30px;
+}
+
+.input {
+    width: 60%;
+    margin: auto;
+    border: 1px silver solid;
+    font-size: 15px;
+    line-height: 40px;
+}
+
+.button {
+    width: 100px;
+    margin: auto;
+}

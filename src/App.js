@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import { Chats } from './Chats';
+import { ChatScreen } from './ChatScreen';
 
 function App() {
     return (
         <div>
-            <Chats />
+            <ChatScreen />
         </div>
     );
 }
