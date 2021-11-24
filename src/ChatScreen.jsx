@@ -6,10 +6,16 @@ export const ChatScreen = () => {
     const [messages, setMessages] = useState(messagesData);
     const [inputValue, setInputValue] = useState('');
 
+    const footRef = useRef(null);
+
     const onSendMessage = () => {
         setMessages(messages.concat({ id: messages.length + 1, content: inputValue }));
         setInputValue('');
     };
+
+    useLayoutEffect(() => {
+        footRef.current.scrollIntoView();
+    }, [messages]);
 
     return (
         <div className='container'>
@@ -17,6 +23,7 @@ export const ChatScreen = () => {
                 {messages.map((message, index) => (
                     <li key={message.id} className='message'>
                         <p>{message.content}</p>
+                        {index === messages.length - 1 && <div ref={footRef}></div>}
                     </li>
                 ))}
             </ul>
